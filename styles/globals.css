@@ -1,1 +1,69 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: #00ffcc;
+}
 
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.landing-logo {
+  width: 200px;
+  margin-bottom: 30px;
+  animation: glow-logo 4s ease-in-out infinite;
+}
+
+@keyframes glow-logo {
+  0% { filter: drop-shadow(0 0 2px #00ffcc); }
+  50% { filter: drop-shadow(0 0 10px #00ffcc); }
+  100% { filter: drop-shadow(0 0 2px #00ffcc); }
+}
+
+.headline {
+  font-size: 32px;
+  margin: 10px 0;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+.subhead {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;
+}
+
+.glow-button {
+  background-color: #00ffcc;
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+  transition: all 0.3s ease;
+}
+
+.glow-button.alt {
+  background-color: #ff5c5c;
+  box-shadow: 0 0 10px #ff5c5c, 0 0 20px #ff5c5c;
+  color: white;
+}
+
+.glow-button:hover {
+  transform: scale(1.05);
+}
